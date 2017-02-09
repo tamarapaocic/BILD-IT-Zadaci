@@ -18,9 +18,8 @@ public class Zadatak3 {
         System.out.println("Najveci zajednicki djelilac za " + br1 +  " i " + br2 + " je " + nzd(br1, br2)); 
         
         }
-	   
-	    //metoda za pronalazak najveceg zajednickog djelioca
-	public static int nzd (int br1,int br2){
+	  
+	public static int nzd (int br1,int br2){ //metoda za pronalazak najveceg zajednickog djelioca
 		
 		int nzd = 1; //pocetni nzd
 		int k = 2; //moguci nzd

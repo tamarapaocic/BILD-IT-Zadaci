@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Zadatak4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
         
 		int[] list = new int[100]; //niz od 100 brojeva
 		int[] count = new int [10]; //niz za brojac

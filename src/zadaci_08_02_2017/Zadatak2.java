@@ -41,6 +41,5 @@ public class Zadatak2 {
 		
 		//Ispis  
 		System.out.println("Broj samoglasnika je " + brojSamoglasnika + ", a broj suglasnika je " + brojSuglasnika);
-
 	}
 }

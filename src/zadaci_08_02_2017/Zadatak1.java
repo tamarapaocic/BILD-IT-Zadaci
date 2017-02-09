@@ -14,7 +14,7 @@ public class Zadatak1 {
     list.add(5);
     list.add(1);
     list.add(7);
-    list.add(2);
+    list.add(4);
     
     //Ispis najveceg elementa
     System.out.println(max(list));

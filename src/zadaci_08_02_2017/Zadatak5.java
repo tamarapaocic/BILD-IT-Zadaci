@@ -13,6 +13,7 @@ public class Zadatak5 {
 			
 		//unos prekida nula
 		while(broj != 0){
+			
 			System.out.println("unesite broj");
 		    broj = sc.nextInt();
 		    
