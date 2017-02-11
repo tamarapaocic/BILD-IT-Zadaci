@@ -1,5 +1,6 @@
 package zadaci_10_02_2017;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Zadatak5 {
@@ -7,6 +8,7 @@ public class Zadatak5 {
 	    public static void main(String[] args) {
 	    //nova 3x3 matrica
 		double[][] array = new double[3][3];
+		
 		System.out.println("Unesite 3x3 matricu red po red ");
 		//poziv metode za unos elemenata u matricu
 		enterMatrix(array);
@@ -22,11 +24,14 @@ public class Zadatak5 {
 	    
 	    public static void enterMatrix(double[][] matrix) { //metoda za unos elemenata u matricu
 			Scanner input = new Scanner(System.in);
+			try{
 			//prolazak kroz sve redove i kolone i unos el.
 			for (int i = 0; i < matrix.length; i++) {
 				for (int j = 0; j < matrix[i].length; j++) {
 					matrix[i][j] = input.nextDouble();
 				}
+			}} catch(InputMismatchException e){
+				System.out.println("Wrong input");
 			}
 		}
 	    
