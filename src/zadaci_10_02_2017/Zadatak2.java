@@ -8,14 +8,18 @@ public class Zadatak2 {
 	public static void main(String[] args) {
 		//scanner objekat
         Scanner input = new Scanner(System.in);
-		System.out.println("Unesi 10 double brojeva");
 		//kreiranje niza od 10 elemenata i njihov unos
 		double[] niz = new double[10];
-		for(int i=0;i<10;i++){
+		try {
+			System.out.println("Unesi 10 double brojeva");
+		    for(int i=0;i<10;i++){
 			niz[i] = input.nextDouble();
 		}
 		//poziv metode i ispis
 		System.out.println(min(niz));
+		} catch(Exception ex){
+			System.out.println("Wrong input");
+		}
 	}
 	   //metoda za pronalak najmanjeg elementa u nizu
 	public static double min(double[] niz)
