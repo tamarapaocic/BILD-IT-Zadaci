@@ -1,5 +1,6 @@
 package zadaci_09_02_2017;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Zadatak2 {
@@ -24,7 +25,18 @@ public class Zadatak2 {
 			int result = num1 - num2;
 			
 			System.out.println("Koliko je " + num1 + " - " + num2 + "?");
-			int answer = sc.nextInt(); //Korisnikov odgovor
+			int answer = 0 ; //Korisnikov odgovor
+			while(true) { //Prolazimo kroz petlju dok korisnik ne unese odgovarajucu vrijednost.
+				try {
+					answer = sc.nextInt();
+					break;
+				}
+				catch(InputMismatchException ex) { //Ukoliko korisnik ne unese broj program ce ga pitat da pokusa
+					System.out.println("Niste unijeli broj. Pokusajte ponovo: ");//ponovo dok ne unese broj
+					System.out.print("Koliko je " + num1 + " - " + num2 + " ? ");
+					sc.nextLine();
+				}
+			}
 			
 			if (answer == result) { //Ako je korisnikov odgovor jedak rezultatu
 				count++; //Povecati brojac
