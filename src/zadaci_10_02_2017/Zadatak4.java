@@ -1,10 +1,13 @@
 package zadaci_10_02_2017;
 
+import java.util.InputMismatchException;
+
 public class Zadatak4 {
 
 	public static void main(String[] args) {
 		//novi scanner
 		java.util.Scanner sc = new java.util.Scanner(System.in);
+		try{
 		//unos broja redova i kolona
 		System.out.println("Unesite broj redova");
 		int r = sc.nextInt();
@@ -26,6 +29,10 @@ public class Zadatak4 {
 		 int[] location = locateLargest(matrix);
 		 //ispis lokacije
 		 System.out.println("Lokacija najveceg elementa je (" + location[0] + "," + location[1] + ")");
+		 
+	     } catch(InputMismatchException e){
+	    	 System.out.println("error");
+	    	 }
 	     }
 
          public static int[] locateLargest(double[][] a){ //metoda prima unesenu matricu a vraca lokaciju najveceg el. kao niz
