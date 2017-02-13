@@ -11,8 +11,16 @@ public class Zadatak4 {
 		//unos broja redova i kolona
 		System.out.println("Unesite broj redova");
 		int r = sc.nextInt();
+		if(r < 0){
+			System.out.println("Broj redova mora biti pozitivan. Unesite ponovo:");
+			r = sc.nextInt();
+		}
 		System.out.println("Unesite broj kolona");
 		int c = sc.nextInt();
+		if(c < 0){
+			System.out.println("Broj kolona mora biti pozitivan. Unesite ponovo:");
+			c = sc.nextInt();
+		}
 		//kreiranje matrica sa r redova i c kolona
 		 double[][] matrix = new double[r][c];
 		
