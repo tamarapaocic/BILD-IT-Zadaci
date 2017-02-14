@@ -9,6 +9,7 @@ public class Zadatak5 {
     try{  
     	System.out.println("unesite neki string");
     	String unos = sc.nextLine();
+    	sc.close();
     	//ispis i poziv metode
     	System.out.println("Broj slova: " + countLetters(unos));
     }

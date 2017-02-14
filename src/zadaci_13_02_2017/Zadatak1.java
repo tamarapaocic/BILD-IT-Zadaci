@@ -23,6 +23,7 @@ public class Zadatak1 {
 		System.out.println("Unesite pozitivan broj");
 		months = sc.nextInt();
 	}
+	sc.close();
 	} catch(InputMismatchException e){
 		System.out.println("Wrong input");
 	}

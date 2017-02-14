@@ -11,6 +11,7 @@ public class Zadatak3 {
     String prvi = sc.nextLine();
     System.out.println("Unesite drugi string: ");
     String drugi = sc.nextLine();
+    sc.close();
     int index = 0;
     int manji; //varijabla za manji string
     

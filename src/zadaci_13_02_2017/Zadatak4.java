@@ -19,6 +19,7 @@ public class Zadatak4 {
     		int broj = sc.nextInt();
     		brojevi.add(broj);
     	}
+    	sc.close();
     	//inverzija elemenata u listi
     	Collections.reverse(brojevi);
     	System.out.println(brojevi);
