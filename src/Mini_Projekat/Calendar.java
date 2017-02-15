@@ -297,6 +297,7 @@ public class Calendar {
 										System.out.println();
 									} else {
 										System.out.println("\n\tZa " + datum + " nemate remindera.");
+										break;
 									}
 								}
 								on = false;
@@ -348,5 +349,6 @@ public class Calendar {
                     }catch (Exception e) {
 	                System.out.println("\n\tPogresan unos.");;
                     }
-			    }}
+			    } 
+					} 
               }
