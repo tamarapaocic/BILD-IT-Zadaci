@@ -11,8 +11,8 @@ public class Zadatak3 {
 	//metoda za printanje prostih brojeva od 2 do 1000
 	public static void printPrimeNumbers (){
 	int count = 0;
-	for(int number = 2; number <= 1000; number++) {
-		 if (isPrime(number)) {
+	for(int number = 0; number <= 100000; number++) {
+		 if (isPrime(number) != 0) {
 			 count++;
 			 System.out.print(number + (count % 8 == 0 ? "\n" : " " ));
 		 }
@@ -20,14 +20,19 @@ public class Zadatak3 {
     }
 	}
 	//metoda za provjera da li je broj prost
-    public static boolean isPrime(int number){
-	for (int divisor = 2; divisor <= number / 2; divisor++) { 
+    public static int isPrime(int number){
+    	boolean isPrime = false;
+	for (int divisor = 2; divisor < number; divisor++) { 
 		if (number % divisor == 0) {
-			return false;
-      }
-      }
-    return true;
+			isPrime = false;
+			break;
+      } else
+    	  isPrime = true;
+	}
+		if(isPrime) return number;
+		return 0;
+      
 
 	}
+    }
 
-}
