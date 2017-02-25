@@ -10,13 +10,16 @@ public class Zadatak3 {
 		try{
 		Scanner unos = new Scanner(System.in);
 		System.out.println("Enter the number: ");
-		Short broj = unos.nextShort();
-		while(broj < 0){
-			System.out.println("Enter poisitive number: ");
-			broj = unos.nextShort();
-		}
+		short broj = unos.nextShort();
+		String bits = "";
+
 		
-		System.out.println(String.format("%016d", Integer.parseInt(Integer.toBinaryString(broj))));
+		for (int i = 0; i < 16; i++) {
+			bits = (broj & 1) + bits;
+			broj >>= 1;
+		}
+
+		System.out.println("The bits are " + bits);
 		
 		}catch(InputMismatchException e){
 			System.out.println("Wrong input.");
