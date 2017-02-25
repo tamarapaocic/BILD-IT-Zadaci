@@ -12,7 +12,6 @@ public class Zadatak3 {
 		System.out.println("Enter the number: ");
 		short broj = unos.nextShort();
 		String bits = "";
-
 		
 		for (int i = 0; i < 16; i++) {
 			bits = (broj & 1) + bits;
