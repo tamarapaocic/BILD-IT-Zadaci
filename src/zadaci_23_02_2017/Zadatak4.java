@@ -11,16 +11,16 @@ public class Zadatak4 {
 	public static void main(String[] args) {
 		
 		System.out.println("Trenutacno vrijeme i datum: ");
-		vrijeme();
-        
+        System.out.println(vrijeme());        
 	}
 
-	//metoda koja ispisuje trenutacno vrijeme i datum
-	public static void vrijeme(){
+	//metoda koja vraca trenutacno vrijeme i datum
+	public static String vrijeme(){
 	
 		//format za datum i vrijeme
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		LocalDateTime now = LocalDateTime.now();
-		System.out.println(dtf.format(now));
+		String datumVrijeme = dtf.format(now);
+		return datumVrijeme;
 	}
 }

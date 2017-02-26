@@ -10,10 +10,24 @@ public class Zadatak3 {
 		
 		System.out.println("Unesite Social Security broj u formatu DDD-DD-DDDD");
 		
-		String broj = unos.nextLine();
+		String broj = "";
 		
-		//provjera da li uneseni broj odgovara odredjenom formatu tj da li je validan
-		System.out.print((broj.matches("\\d{3}-\\d{2}-\\d{4}") ? "Broj je validan" : "Broj nije validan"));
-	}
+		//provjera da li uneseni broj odgovara odredjenom formatu tj da li je validan,ako nije trazi od korisnika da unese ponovo
+		while (!broj.matches("\\d {3}-\\d{2}-\\d{4}")) {
 
-}
+			broj = unos.nextLine();
+
+			if (!broj.matches("\\d{3}-\\d{2}-\\d{4}")) {
+				System.out.println("Unos se ne poklapa sa formatom  DDD-DD-DDDD! Pokusajte ponovo:");
+			}
+			
+			else if (broj.matches("\\d{3}-\\d{2}-\\d{4}")) {
+				System.out.println("Unijeli ste ispravan Social Security Number.");
+				break;
+			}
+
+		}
+
+		unos.close();
+	}
+	}
