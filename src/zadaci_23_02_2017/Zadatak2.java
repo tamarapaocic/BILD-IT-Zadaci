@@ -13,7 +13,7 @@ public class Zadatak2 {
 		
 		System.out.println("Duzina stringa je " + str.length());
 
-		char prvoSlovo = 'a';
+		char prvoSlovo = ' ';
 		for (int i = 0; i < str.length(); i++) {
 			if (Character.isLetter(str.charAt(i))) {
 				prvoSlovo = str.charAt(i);
@@ -21,7 +21,12 @@ public class Zadatak2 {
 			}
 		}
 		
-		System.out.println("Prvo slovo je " + prvoSlovo);
+		if(prvoSlovo == ' '){
+			System.out.println("U stringu nema slova.");
+		} else{
+			System.out.println("Prvo slovo je " + prvoSlovo);
+
+		}
 
 
 	}
