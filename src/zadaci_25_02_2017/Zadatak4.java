@@ -3,6 +3,8 @@ package zadaci_25_02_2017;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import metode.DoubleUserInput;
+
 public class Zadatak4 {
 
 	public static void main(String[] args) {
@@ -21,14 +23,16 @@ public class Zadatak4 {
 		final int COLUMNS = 4;
 		double[][] m = new double[ROWS][COLUMNS];
 
-		System.out.println("Unesite " + ROWS + "x" + COLUMNS + " matricu red po red:");
-		try{
-		for (int row = 0; row < m.length; row++)
-			for (int col = 0; col < m[row].length; col++) 
-				m[row][col] = sc.nextDouble();
-		}catch(InputMismatchException e){
-			System.out.println("Pogresan unos");
+		for (int row = 0; row < m.length; row++) {
+			for (int col = 0; col < m[0].length; col++) {
+				m[row][col] = DoubleUserInput.getDouble(sc,"Unesite broj: ");
+			}
 		}
+
+		sc.close();
+
+		System.out.println("");
+
 		return m;
 	}
 

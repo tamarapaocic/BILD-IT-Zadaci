@@ -6,9 +6,7 @@ public class Zadatak1 {
 
 	public static void main(String[] args) {
 		
-		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Unesite niz od 10 brojeva: ");
 		// novi niz cija je duzina 100
 		int[] array = new int[100];
 		// niz koji ce nam sluziti za brojanje koliko je puta neki broj unesen

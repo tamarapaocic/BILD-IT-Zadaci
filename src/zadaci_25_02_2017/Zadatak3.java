@@ -22,7 +22,7 @@ public class Zadatak3 {
         }
 
 		System.out.println("The list has" + (isConsecutiveFour(values) ? " " : " no ") + "consecutive fours");
-		
+		sc.close();
 		}catch(InputMismatchException e){
 			System.out.println("Wrong input.");
 		}

@@ -3,33 +3,39 @@ package zadaci_25_02_2017;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import metode.DoubleUserInput;
+
 public class Zadatak5 {
 
 	public static void main(String[] args) {
-		
-		double[][] matrix1 = getmatrix(1);
-		double[][] matrix2 = getmatrix(2);
-
-		double[][] matrix3 = addMatrix(matrix1, matrix2);
-
-		print(matrix1, matrix2, matrix3);
-	}
 	
-	public static double[][] getmatrix(int n) {
-		double[][] m = new double[3][3];
-		try{
-		Scanner input = new Scanner(System.in);
+	Scanner input = new Scanner(System.in);
 
-		System.out.print("Enter matrix" + n + ": ");
+	System.out.println("Enter matrix1: ");
 
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++)
-				m[i][j] = input.nextDouble();
+	double[][] matrix1 = new double[3][3];
+	
+	for (int i = 0; i < matrix1.length; i++) {
+		for (int j = 0; j < matrix1[0].length; j++) {
+			matrix1[i][j] = DoubleUserInput.getDouble(input," ");
 		}
-		}catch(InputMismatchException e){
-			System.out.println("Wrong input.");
+	}
+
+	System.out.println("\nEnter matrix2: ");
+
+	double[][] matrix2 = new double[3][3];
+	
+	for (int i = 0; i < matrix2.length; i++) {
+		for (int j = 0; j < matrix2[0].length; j++) {
+			matrix2[i][j] = DoubleUserInput.getDouble(input," ");
 		}
-		return m;
+	}
+
+	input.close();
+	
+	double[][] matrix3 = addMatrix(matrix1, matrix2);
+
+	print(matrix1, matrix2, matrix3);
 	}
 
 	
