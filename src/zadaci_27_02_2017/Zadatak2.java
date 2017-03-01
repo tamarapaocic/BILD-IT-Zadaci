@@ -3,36 +3,42 @@ package zadaci_27_02_2017;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import metode.DoubleUserInput;
+
 public class Zadatak2 {
 
 		public static void main(String[] args) {
 			
-			double[][] matrix1 = getmatrix(1);
-			double[][] matrix2 = getmatrix(2);
+			Scanner input = new Scanner(System.in);
+
+			System.out.println("Enter matrix1: ");
+
+			double[][] matrix1 = new double[3][3];
+			
+			for (int i = 0; i < matrix1.length; i++) {
+				for (int j = 0; j < matrix1[0].length; j++) {
+					matrix1[i][j] = DoubleUserInput.getDouble(input," ");
+				}
+			}
+
+			System.out.println("\nEnter matrix2: ");
+
+			double[][] matrix2 = new double[3][3];
+			
+			for (int i = 0; i < matrix2.length; i++) {
+				for (int j = 0; j < matrix2[0].length; j++) {
+					matrix2[i][j] = DoubleUserInput.getDouble(input," ");
+				}
+			}
+
+			input.close();
 
 			double[][] matrix3 = multiplyMatrix(matrix1, matrix2);
 
 			print(matrix1, matrix2, matrix3);
 		}
 		
-		//metoda za unos elemenata u 3x3 matricu
-		public static double[][] getmatrix(int n) {
-			double[][] m = new double[3][3];
-			try{
-			Scanner input = new Scanner(System.in);
-
-			System.out.print("Enter matrix" + n + ": ");
-
-			for (int i = 0; i < 3; i++) {
-				for (int j = 0; j < 3; j++)
-					m[i][j] = input.nextDouble();
-			}
-			}catch(InputMismatchException e){
-				System.out.println("Wrong input.");
-			}
-			return m;
-		}
-
+	
 		//metoda za mnozenje dvije matrice
 		public static double[][] multiplyMatrix(double[][] a, double[][] b) {
 			double[][] c = new double[a.length][a[0].length];
