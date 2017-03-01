@@ -30,6 +30,7 @@ public class Zadatak2 {
 		}catch(InputMismatchException e){
 			System.out.println("Pogresan unos");
 		}
+		sc.close();
 		return m;
 	}
 	
