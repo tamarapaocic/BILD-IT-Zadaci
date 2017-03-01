@@ -57,6 +57,7 @@ public class Zadatak1 {
 		}}catch(InputMismatchException e){
 			System.out.println("Wrong input.");
 		}
+		input.close();
 	}
 
 	public static void main(String[] args) {
