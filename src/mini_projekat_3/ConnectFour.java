@@ -2,6 +2,8 @@ package mini_projekat_3;
 
 import java.util.Scanner;
 
+import metode.IntUserInput;
+
 public class ConnectFour {
 	
 		private char[][] field; 
@@ -78,18 +80,9 @@ public class ConnectFour {
 				isValid = true;
 				System.out.print("Insert a " + diskColor + " disk in the column (0 - 6): ");
 				
-				try {
 					Scanner input = new Scanner(System.in);
-					playersInput = input.nextInt(); 
+					playersInput = IntUserInput.getInt(input, "", 0, 6);
 					
-				} catch (Exception e) {
-					System.out.println("Wrong input.");
-					isValid = false;
-				}
-				if (playersInput < 0 || playersInput > 6) {
-					System.out.println("Wrong input, column are marked from 0 to 6, try again. ");
-					isValid = false;
-				}
 				if (!availableField(playersInput)) {
 					System.out.println("Unavaible field in that column, try again. ");
 					isValid = false;
