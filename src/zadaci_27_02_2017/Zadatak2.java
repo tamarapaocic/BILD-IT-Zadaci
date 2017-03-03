@@ -1,4 +1,4 @@
-package zadaci_27_02_2017;
+ package zadaci_27_02_2017;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -45,7 +45,9 @@ public class Zadatak2 {
 
 			for (int i = 0; i < c.length; i++) {
 				for (int j = 0; j < c[i].length; j++) {
-					c[i][j] = a[i][j] * b[i][j];
+					for (int k = 0; k < c.length; k++) {
+						c[i][j] += a[i][k] * b[k][j];
+					}
 				}
 			}
 			return c;
@@ -54,7 +56,7 @@ public class Zadatak2 {
 		//printanje elemenata
 		public static void print(double[][] m, int r) {	
 			for (int j = 0; j < m[r].length; j++) {
-				System.out.print(m[r][j] + " ");
+				System.out.printf("%5.1f", m[r][j]);
 			}	
 		}
 		
