@@ -1,7 +1,8 @@
 package zadaci_28_02_2017;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import metode.IntUserInput;
 
 public class Zadatak2 {
 
@@ -20,15 +21,11 @@ public class Zadatak2 {
 	    public static int[][] getArray() {
 			Scanner sc = new Scanner(System.in);
 		int[][] m = new int[3][3];
-		try{
+		
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[i].length; j++) {
-				m[i][j] = sc.nextInt();
+				m[i][j] = IntUserInput.getInt(sc, "");
 			}
-		}
-		}catch(InputMismatchException e){
-			System.out.println("Pogresan unos");
-			sc.close();
 		}
 	
 		return m;
