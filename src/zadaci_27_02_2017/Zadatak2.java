@@ -1,6 +1,5 @@
  package zadaci_27_02_2017;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import metode.DoubleUserInput;
