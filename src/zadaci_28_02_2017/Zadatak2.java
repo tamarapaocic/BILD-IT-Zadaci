@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Zadatak2 {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("Unesite elemente 1. niza");
 		int[][] niz1 = getArray();
 		
@@ -14,12 +14,11 @@ public class Zadatak2 {
 		int[][] niz2 = getArray();
 	
 		System.out.println("Two arrays are " + (equals(niz1,niz2) ? " " : " not ") + "identical");
-		
 	   }
 	
 	    //metoda za unos elemenata u niz
 	    public static int[][] getArray() {
-		Scanner sc = new Scanner(System.in);
+			Scanner sc = new Scanner(System.in);
 		int[][] m = new int[3][3];
 		try{
 		for (int i = 0; i < m.length; i++) {
@@ -29,9 +28,11 @@ public class Zadatak2 {
 		}
 		}catch(InputMismatchException e){
 			System.out.println("Pogresan unos");
+			sc.close();
 		}
-		sc.close();
+	
 		return m;
+
 	}
 	
 	    //metoda za provjeru da li su dva niza identicna
