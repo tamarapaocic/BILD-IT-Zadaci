@@ -48,15 +48,12 @@ public class IntUserInput {
 
 				wrongUserInput = false;
 
-				if (userInput < condition) {
-					System.out
-							.println("Wrong input. You have to enter an integer bigger or equal to "
-									+ condition);
+				if (userInput <= condition) {
+					System.out.println("Wrong input. You have to enter an integer bigger than "	+ condition);
 					wrongUserInput = true;
 				}
 			} catch (Exception ex) {
-				System.out
-						.println("Wrong input. You have to enter an integer bigger or equal to "
+				System.out.println("Wrong input. You have to enter an integer bigger or equal to "
 								+ condition);
 				input.nextLine();
 			}

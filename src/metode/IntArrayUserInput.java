@@ -7,8 +7,7 @@ public class IntArrayUserInput {
 			int arrayLength, int firstCondition, int secondCondition) {
 		int[] numbers = new int[arrayLength];
 
-		System.out.println("Potrebno je da unesete " + numbers.length
-				+ " cijelih brojeva.");
+		System.out.println("Potrebno je da unesete " + numbers.length + " cijelih brojeva.");
 
 		for (int i = 0; i < numbers.length; i++) {
 			boolean wrongUserInput = true;
