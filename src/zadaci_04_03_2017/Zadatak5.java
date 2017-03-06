@@ -22,5 +22,4 @@ public class Zadatak5 {
 			number = number.add(BigInteger.ONE);
 		}
 	}
-
 }

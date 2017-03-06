@@ -19,6 +19,7 @@ public class Zadatak3 {
 				number = number.add(BigInteger.ONE);
 			}
 		}
+	
 
 		/** Return true ako je broj prime */
 	public static boolean isPrime(BigInteger num) {

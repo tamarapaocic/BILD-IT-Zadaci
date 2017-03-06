@@ -22,6 +22,7 @@ public class Zadatak2 {
         
 		//povecanje broja
 		number = number.add(BigInteger.ONE);
+		
 				}
 			}
 

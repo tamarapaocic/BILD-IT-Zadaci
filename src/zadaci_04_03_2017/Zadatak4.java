@@ -15,6 +15,7 @@ public class Zadatak4 {
 			BigInteger marsennePrime=number.subtract(BigInteger.ONE);//potencijalni mersenne prime (2^i - 1)
 			if (marsennePrime.isProbablePrime(1)) {
 				System.out.println(i+"\t"+marsennePrime);
+				
 			}
 		}
 	}

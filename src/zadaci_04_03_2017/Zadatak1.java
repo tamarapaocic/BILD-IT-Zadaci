@@ -17,6 +17,7 @@ public class Zadatak1 {
 		BigInteger three = new BigInteger("3");
 				
 		int count =1;
+		
 		while(count<=10){
 		if(number.mod(two).equals(BigInteger.ZERO) || number.mod(three).equals(BigInteger.ZERO) ) {
 			System.out.println(count+". "+number);
