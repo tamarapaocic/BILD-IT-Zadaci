@@ -53,7 +53,7 @@ public class IntUserInput {
 					wrongUserInput = true;
 				}
 			} catch (Exception ex) {
-				System.out.println("Wrong input. You have to enter an integer bigger or equal to "
+				System.out.println("Wrong input. You have to enter an integer bigger than "
 								+ condition);
 				input.nextLine();
 			}
