@@ -8,15 +8,15 @@ public class MyStringBuilder1 {
 	}
 
 	public MyStringBuilder1 append(MyStringBuilder1 s) {
-		String newStr  = this.s; 
-		newStr += s;
-		return new MyStringBuilder1(newStr);
+		this.s = this.s + s;
+		return new MyStringBuilder1(this.s );
 	}
 
 	public MyStringBuilder1 append(int i) {
-		String newStr  = this.s; 
-		newStr += i + "";
-		return new MyStringBuilder1(newStr);
+		String temp = "";
+		temp += i + "";
+		temp = this.s + temp;
+		return new MyStringBuilder1(temp);
 	}
 
 	public int length() {

@@ -6,11 +6,11 @@ public class MyStringBuilder1Test {
 		MyStringBuilder1 str1 = new MyStringBuilder1("TEST");
 
 		System.out.println("\nAppend the string \" MyStringBuilder1\" to string: " + 
-			str1.append(new MyStringBuilder1(" MyStringBuilder1")));
+			str1.append(new MyStringBuilder1(" MyStringBuilder5")));
 
 		// Display string with the integer 101 append to it
 		System.out.println("\nAppend integer 101 to the string: " + str1.append(101));
-
+        
 		// Display the length of str1
 		System.out.println("\nLength of string: " + str1.length());
 
