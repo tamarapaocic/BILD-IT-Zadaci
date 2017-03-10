@@ -1,6 +1,5 @@
 package zadaci_10_03_2017;
 
-import java.io.IOException;
 
 public class Zadatak4Test {
 	public static void main(String[] args) throws Exception {
