@@ -6,12 +6,12 @@ public class MyPoint {
 	private double y;
 
 	/** Konstruktor koji kreira tacku (0, 0) */
-	MyPoint() {
+	public MyPoint() {
 		this(0, 0);
 	}
 
 	/** Konstruktor koji kreira tacku sa specificnim vrijednostima */
-	MyPoint(double x, double y) {
+	public MyPoint(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}
