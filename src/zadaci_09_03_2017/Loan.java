@@ -20,6 +20,14 @@ public class Loan {
 		this.numberOfYears = numberOfYears;
 		this.loanAmount = loanAmount;
 		loanDate = new java.util.Date();
+		
+		if (loanAmount <= 0)
+    		throw new IllegalArgumentException("loanAmount must be greater than 0.");
+    	if (annualInterestRate <= 0)
+    		throw new IllegalArgumentException("annualInterestRate must be greater than 0.");
+    	if (numberOfYears <= 0)
+    		throw new IllegalArgumentException("numberOfYears must be greater than 0.");
+
 	}
 
 	/** Return annualInterestRate */
